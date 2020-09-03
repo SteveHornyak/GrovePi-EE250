@@ -28,7 +28,7 @@ import grovepi
 is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
 be true"""
 if __name__ == '__main__':
-    PORT = 4    # D4
+    PORT = 6    # D6
 
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
