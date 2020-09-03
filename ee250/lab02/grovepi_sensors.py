@@ -31,14 +31,17 @@ be true"""
 if __name__ == '__main__':
     PORT = 6    # D6
 
-    while True:
-        #So we do not poll the sensors too quickly which may introduce noise,
-        #sleep for a reasonable time of 200ms between each iteration.
-        time.sleep(0.2)
+while True:
+	try:
+		#So we do not poll the sensors too quickly which may introduce noise,
+        	#sleep for a reasonable time of 200ms between each iteration.
+        	time.sleep(0.2)
+		dist = grovepi.ultrasonicRead(PORT)
 
-        dist = grovepi.ultrasonicRead(PORT)
+        	#Print the distance to the rgb lcd
+        	setRGB(0, 128, 64)
+        	setRGB(0, 255, 0)
+        	setText(dist + "cm")
 
-        #Print the distance to the rgb lcd
-        setRGB(0, 128, 64)
-        setRGB(0, 255, 0)
-        setText(dist + "cm")
+	except (IOError,TypeError) as e:
+		print("Error")
