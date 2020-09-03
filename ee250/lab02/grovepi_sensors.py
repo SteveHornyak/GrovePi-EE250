@@ -41,4 +41,4 @@ if __name__ == '__main__':
         #Print the distance to the rgb lcd
         setRGB(0, 128, 64)
         setRGB(0, 255, 0)
-        setText(dist + "cm")
+        setText("34cm")
