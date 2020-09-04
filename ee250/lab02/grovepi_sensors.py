@@ -40,6 +40,7 @@ be true"""
 if __name__ == '__main__':
     PORT = 4    # D4
 
+    #Set's background to green
     setRGB(0, 255, 0)
 
     #Clears LCD
@@ -53,6 +54,6 @@ if __name__ == '__main__':
         #0-1023
         sensor_val = grovepi.analogRead(pot)
 
-        threshold = sensor_val // 4
+        dist = grovepi.ultrasonicRead(PORT)
 
-        setText_norefresh(str(threshold) + "cm\n" + str(grovepi.ultrasonicRead(PORT)) + "cm")
+        setText_norefresh("%3dcm\n" + "%3dcm" %(sensor_val, dist))
