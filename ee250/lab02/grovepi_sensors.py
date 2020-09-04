@@ -20,6 +20,7 @@ sys.path.append('../../Software/Python/')
 sys.path.append('../../Software/Python/grove_rgb_lcd')
 
 import grovepi
+from grove_rgb_lcd import *
 
 """This if-statement checks if you are running this python file directly. That 
 is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
@@ -27,6 +28,17 @@ be true"""
 if __name__ == '__main__':
     PORT = 4    # D4
 
+    setText("Hello world\nLCD test")
+    setRGB(0,128,64)
+
+    # Slowly change the colors every 0.01 seconds.
+    for c in range(0,255):
+        setRGB(c,255-c,0)
+        time.sleep(0.01)
+
+    setRGB(0,255,0)
+    setText("Bye bye, this should wrap")
+    
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
         #sleep for a reasonable time of 200ms between each iteration.
