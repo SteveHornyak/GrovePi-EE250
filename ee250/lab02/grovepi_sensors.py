@@ -60,6 +60,6 @@ if __name__ == '__main__':
 
         setText_norefresh(str(grovepi.ultrasonicRead(PORT)))
 
-        sensor_val = grovepi.analogRead(potentiometer)
+        sensor_val = grovepi.analogRead(pot)
 
         print(str(sensor_val))
