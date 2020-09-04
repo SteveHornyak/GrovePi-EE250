@@ -56,10 +56,22 @@ if __name__ == '__main__':
 
         dist = grovepi.ultrasonicRead(PORT)
 
-        sensor_val = str(sensor_val)
-        dist = str(dist)
+        if dist > sensor_val:
+            sensor_val = str(sensor_val)
+            dist = str(dist)
 
-        sensor_val = sensor_val.rjust(3, ' ')
-        dist = dist.rjust(3, ' ')
+            sensor_val = sensor_val.rjust(3, ' ')
+            dist = dist.rjust(3, ' ')
 
-        setText_norefresh(sensor_val + "cm\n" + dist + "cm")
+            setText_norefresh(sensor_val + "cm\n" + dist + "cm")
+
+        else:
+            setRGB(255, 0, 0)
+
+            sensor_val = str(sensor_val)
+            dist = str(dist)
+
+            sensor_val = sensor_val.rjust(3, ' ')
+            dist = dist.rjust(3, ' ')
+
+            setText_norefresh(sensor_val + "cm OBJ PRES\n" + dist + "cm")
