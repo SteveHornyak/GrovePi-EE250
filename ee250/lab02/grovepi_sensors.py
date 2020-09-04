@@ -1,6 +1,9 @@
 """ EE 250L Lab 02: GrovePi Sensors
 List team members here.
+Steve Hornyak
+
 Insert Github repository link here.
+SteveHornyak/GrovePi-EE250/ee250/lab02/grovepi_sensors.py
 """
 
 """python3 interpreters in Ubuntu (and other linux distros) will look in a 
