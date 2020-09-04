@@ -4,6 +4,9 @@ Steve Hornyak
 
 Insert Github repository link here.
 SteveHornyak/GrovePi-EE250/ee250/lab02/grovepi_sensors.py
+
+Demo Link:
+https://drive.google.com/file/d/1qAxhWtCV3KRp20yr_ld443ErD8Ac4G_6/view?usp=sharing
 """
 
 """python3 interpreters in Ubuntu (and other linux distros) will look in a 
