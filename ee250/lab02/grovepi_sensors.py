@@ -57,6 +57,8 @@ if __name__ == '__main__':
         dist = grovepi.ultrasonicRead(PORT)
 
         if dist > sensor_val:
+            setRGB(0, 255, 0)
+
             sensor_val = str(sensor_val)
             dist = str(dist)
 
