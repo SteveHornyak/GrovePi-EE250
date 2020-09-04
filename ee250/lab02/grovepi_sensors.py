@@ -65,6 +65,8 @@ if __name__ == '__main__':
             sensor_val = sensor_val.rjust(3, ' ')
             dist = dist.rjust(3, ' ')
 
+            textCommand(0x01)
+
             setText_norefresh(sensor_val + "cm\n" + dist + "cm")
 
         else:
