@@ -65,7 +65,7 @@ if __name__ == '__main__':
             sensor_val = sensor_val.rjust(3, ' ')
             dist = dist.rjust(3, ' ')
 
-            setText_norefresh(sensor_val + "cm        \n" + dist + "cm")
+            setText_norefresh(sensor_val + "cm         \n" + dist + "cm")
 
         else:
             setRGB(255, 0, 0)
