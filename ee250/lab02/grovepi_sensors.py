@@ -20,7 +20,19 @@ sys.path.append('../../Software/Python/')
 sys.path.append('../../Software/Python/grove_rgb_lcd')
 
 import grovepi
+import time
 from grove_rgb_lcd import *
+
+#Potentiometer port
+pot = 0
+
+#ADC reference voltage and GrovePi VCC
+adc_ref = 5
+gpi_vcc = 5
+
+#Full angle of pot based on specs
+full_ang = 300
+
 
 """This if-statement checks if you are running this python file directly. That 
 is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
@@ -47,3 +59,7 @@ if __name__ == '__main__':
         time.sleep(0.2)
 
         setText_norefresh(str(grovepi.ultrasonicRead(PORT)))
+
+        sensor_val = grovepi.analogRead(potentiometer)
+
+        print(str(sensor_val))
