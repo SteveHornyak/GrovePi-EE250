@@ -1,3 +1,6 @@
+Steve Hornyak
+EE250 - Fall 2020
+
 4.1 
 	git clone git@github.com:my-name/my-imaginary-repo.git
 	cd my-imaginary-repo
