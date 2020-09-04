@@ -44,7 +44,7 @@ if __name__ == '__main__':
     PORT = 4    # D4
 
     #Set's background to green
-    setRGB(0, 255, 0)
+    setRGB(0, 255, 64)
 
     #Clears LCD
     textCommand(0x01)
@@ -60,7 +60,7 @@ if __name__ == '__main__':
         dist = grovepi.ultrasonicRead(PORT)
 
         if dist > sensor_val:
-            setRGB(0, 255, 0)
+            setRGB(0, 255, 64)
 
             sensor_val = str(sensor_val)
             dist = str(dist)
@@ -71,7 +71,7 @@ if __name__ == '__main__':
             setText_norefresh(sensor_val + "cm         \n" + dist + "cm")
 
         else:
-            setRGB(255, 0, 0)
+            setRGB(255, 48, 24)
 
             sensor_val = str(sensor_val)
             dist = str(dist)
