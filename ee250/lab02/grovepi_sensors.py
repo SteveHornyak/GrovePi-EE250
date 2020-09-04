@@ -47,4 +47,4 @@ if __name__ == '__main__':
         print(grovepi.ultrasonicRead(PORT))
 
         setRGB(255, 0, 0)
-        setText(grovepi.ultrasonicRead(PORT))
+        setText(str(grovepi.ultrasonicRead(PORT)))
