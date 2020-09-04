@@ -56,4 +56,7 @@ if __name__ == '__main__':
 
         dist = grovepi.ultrasonicRead(PORT)
 
-        setText_norefresh("%3dcm\n" + "%3dcm" %(sensor_val, dist))
+        sensor_val = sensor_val.rjust(3, ' ')
+        dist = dist.rjust(3, ' ')
+
+        setText_norefresh(str(sensor_val) + "cm\n" + str(dist) + "cm")
