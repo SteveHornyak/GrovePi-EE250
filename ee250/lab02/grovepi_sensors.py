@@ -58,8 +58,9 @@ if __name__ == '__main__':
         #sleep for a reasonable time of 200ms between each iteration.
         time.sleep(0.2)
 
-        setText_norefresh(str(grovepi.ultrasonicRead(PORT)))
-
+        #0-1023
         sensor_val = grovepi.analogRead(pot)
 
-        print(str(sensor_val))
+        threshold = sensor_val // 4
+
+        setText_norefresh(str(threshold) + "cm\n" + str(grovepi.ultrasonicRead(PORT)) + "cm")
